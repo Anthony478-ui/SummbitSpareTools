@@ -49,7 +49,7 @@
                 </div>
                 <div class="h-100 d-inline-flex align-items-center me-4">
                     <small class="far fa-envelope-open me-2"></small>
-                    <small>info@example.com</small>
+                    <small>info@summittools.com</small>
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
@@ -77,7 +77,7 @@
             <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
                 <a href="index.html" class="nav-item nav-link ">Home</a>
                 <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link active">Services</a>
+                </a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu bg-light border-0 m-0">
@@ -85,6 +85,9 @@
                         <a href="quote.html" class="dropdown-item">Free Quote</a>
                         <a href="team.html" class="dropdown-item">Our Team</a>
                         <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="Tours.html" class="dropdown-item">Tours</a>
+                        <a href="index.html" class="dropdown-item active">Booking
+                </a>
                         <a href="404.html" class="dropdown-item">404 Page</a>
                     </div>
                 </div>
@@ -98,103 +101,113 @@
             </div>
         </div>
     </nav>
-    <!-- Navbar End -->
+    <!-- Navbar End --> 
 
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-4 text-white animated slideInDown mb-4">Services</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Services</li>
-                </ol>
-            </nav>
-        </div>
-    </div>
-    <!-- Page Header End -->
-
-
-    <!-- Service Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <h1 class="display-6 mb-5">Professional Aircraft Maintenance & Support Services</h1>
+    <!-- Flight Booking Section Start -->
+    <div class="container-fluid bg-light py-5 my-5">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <h1 class="display-6 mb-4">
+              Book Your Next Flight With Aviation Experts
+            </h1>
+            <p class="mb-4">
+              Leverage our industry connections and aviation expertise to find
+              the best flight options for your travel needs. Whether for
+              business or leisure, we provide personalized service with access
+              to exclusive deals.
+            </p>
+            <div class="row g-4 mb-4">
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-check text-primary me-2"></i>
+                  <h6 class="mb-0">Best Price Guarantee</h6>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-check text-primary me-2"></i>
+                  <h6 class="mb-0">24/7 Customer Support</h6>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-check text-primary me-2"></i>
+                  <h6 class="mb-0">Flexible Booking Options</h6>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="d-flex align-items-center">
+                  <i class="fa fa-check text-primary me-2"></i>
+                  <h6 class="mb-0">Expert Travel Advice</h6>
+                </div>
+              </div>
             </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-7.jpg" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                 <i class="fas fa-tools text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Aircraft Maintenance</a>
-                        </div>
-                    </div>
+            <a class="btn btn-primary py-3 px-5" href="">Search Flights</a>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="flight-search-form">
+              <h4 class="mb-4">Find Your Flight</h4>
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="form-floating">
+                    <select class="form-select" id="flightType">
+                      <option value="one-way">One Way</option>
+                      <option value="round-trip">Round Trip</option>
+                      <option value="multi-city">Multi City</option>
+                    </select>
+                    <label for="flightType">Trip Type</label>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-8.jpg" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                 <i class="fas fa-cog text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Engine Services</a>
-                        </div>
-                    </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="fromCity"
+                      placeholder="From"
+                    />
+                    <label for="fromCity">From</label>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-9.jpg" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                 <i class="fas fa-microchip text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Avionics Repair</a>
-                        </div>
-                    </div>
+                <div class="col-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="toCity"
+                      placeholder="To"
+                    />
+                    <label for="toCity">To</label>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-10.jpg" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                 <i class="fas fa-puzzle-piece text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Component Overhaul</a>
-                        </div>
-                    </div>
+                <div class="col-6">
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="departDate" />
+                    <label for="departDate">Departure</label>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-11.jpg.crdownload" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                  <i class="fas fa-wrench text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Tool & Equipment Supply</a>
-                        </div>
-                    </div>
+                <div class="col-6">
+                  <div class="form-floating">
+                    <input type="date" class="form-control" id="returnDate" />
+                    <label for="returnDate">Return</label>
+                  </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item">
-                        <img class="img-fluid" src="img/service-12" alt="">
-                        <div class="d-flex align-items-center bg-light">
-                            <div class="service-icon flex-shrink-0 bg-primary">
-                                <i class="fas fa-boxes text-white"></i>
-                            </div>
-                            <a class="h4 mx-4 mb-0" href="">Spare Parts Distribution</a>
-                        </div>
-                    </div>
+                <div class="col-12">
+                  <button class="btn btn-primary w-100 py-3" type="submit">
+                    Search Flights
+                  </button>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Service End -->
-        
+    <!-- Flight Booking Section End -->
+
+
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
@@ -258,7 +271,6 @@
         </div>
     </div>
     <!-- Footer End -->
-
 
 
     <!-- Back to Top -->
