@@ -52,11 +52,48 @@
       .service-highlight:hover {
         transform: translateY(-5px);
       }
-      .tour-package {
+      /* .tour-package {
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      } */
+
+      .tour-package {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+        height: 100%;
       }
+
+      .tour-package:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .tour-package img {
+        height: 220px;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      .tour-package .p-4 {
+        padding: 1.5rem !important;
+      }
+
+      .tour-package h5 {
+        color: #2c3e50;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+
+      .tour-package p {
+        color: #6c757d;
+        line-height: 1.6;
+      }
+
       .aircraft-card {
         border: none;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -70,6 +107,25 @@
         border-radius: 10px;
         padding: 30px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .hidden-tour {
+        display: none;
+      }
+
+      .fadeInUp {
+        animation: fadeInUp 0.5s ease forwards;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
       }
     </style>
   </head>
@@ -119,47 +175,80 @@
     </div>
     <!-- Topbar End -->
 
-  <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex align-items-center">
-            <h1 class="m-0"><img class="img-fluid me-3" src="img/icon/icon-02-primary.png" alt="">Summit Tools & Spares</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About Us</a>
-                <a href="service.html" class="nav-item nav-link">Our Services</a>
-                
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                    <div class="dropdown-menu bg-light border-0 m-0">
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="quote.html" class="dropdown-item">Free Quote</a>
-                        <a href="team.html" class="dropdown-item">Our Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                        <a href="Tours.html" class="dropdown-item  active">Tours</a>
-                               <a href="index.html" class="dropdown-item ">Booking
-                </a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
-                    </div>
-                </div>
-                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+    <!-- Navbar Start -->
+    <nav
+      class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5"
+    >
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <h1 class="m-0">
+          <img
+            class="img-fluid me-3"
+            src="img/icon/icon-02-primary.png"
+            alt=""
+          />Summit Tools & Spares
+        </h1>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav mx-auto bg-light pe-4 py-3 py-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About Us</a>
+          <a href="service.html" class="nav-item nav-link">Our Services</a>
+
+          <div class="nav-item dropdown">
+            <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              data-bs-toggle="dropdown"
+              >Pages</a
+            >
+            <div class="dropdown-menu bg-light border-0 m-0">
+              <a href="feature.html" class="dropdown-item">Features</a>
+              <a href="quote.html" class="dropdown-item">Free Quote</a>
+              <a href="team.html" class="dropdown-item">Our Team</a>
+              <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+              <a href="Tours.html" class="dropdown-item active">Tours</a>
+              <a href="index.html" class="dropdown-item">Booking </a>
+              <a href="404.html" class="dropdown-item">404 Page</a>
             </div>
-            <div class="h-100 d-lg-inline-flex align-items-center d-none">
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-2" href=""><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-square rounded-circle bg-light text-primary me-0" href=""><i class="fab fa-instagram"></i></a>
-            </div>
+          </div>
+          <a href="contact.html" class="nav-item nav-link">Contact Us</a>
         </div>
+        <div class="h-100 d-lg-inline-flex align-items-center d-none">
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-2"
+            href=""
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-square rounded-circle bg-light text-primary me-0"
+            href=""
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
     </nav>
     <!-- Navbar End -->
 
     <!-- Packed Tours Section Start -->
-    <div class="container-xxl py-5">
+    <!--  <div class="container-xxl py-5">
       <div class="container">
         <div
           class="text-center mx-auto wow fadeInUp" 
@@ -235,9 +324,167 @@
           <a class="btn btn-primary py-3 px-5" href="">View All Tours</a>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- Packed Tours Section End -->
 
+    <!-- Packed Tours Section Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div
+          class="text-center mx-auto wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 700px"
+        >
+          <h1 class="display-6 mb-5">Exclusive Aviation Tours & Experiences</h1>
+          <p class="mb-5">
+            Immerse yourself in the world of aviation with our curated tours and
+            experiences designed for enthusiasts and professionals alike.
+          </p>
+        </div>
+        <div class="row g-4" id="tour-container">
+          <!-- Initially visible tours -->
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="tour-package">
+              <img class="img-fluid" src="img/kisumu.webp" alt="Kisumu Tour" />
+              <div class="p-4">
+                <h5>Kisumu</h5>
+                <p class="mb-3">
+                  Kisumu City is believed to be one of the oldest settlements in
+                  Kenya with historical records indicating that Kisumu was
+                  dominated by diverse cultures and communities.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">From $2,499</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="tour-package">
+              <img
+                class="img-fluid"
+                src="img/Darsalam.webp"
+                alt="Dar es Salam Tour"
+              />
+              <div class="p-4">
+                <h5>Dar es Salam</h5>
+                <p class="mb-3">
+                  Dar es Salaam combines a rich history, vibrant cultural
+                  diversity, breathtaking natural beauty, and lively city
+                  atmosphere to give visitors an unforgettable experience.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">KES $899</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="tour-package">
+              <img
+                class="img-fluid"
+                src="img/mombasa.webp"
+                alt="Mombasa Tour"
+              />
+              <div class="p-4">
+                <h5>Mombasa</h5>
+                <p class="mb-3">
+                  Mombasa, Kenya's oldest and second-largest city, is a cultural
+                  melting pot and the gateway to the Kenyan coast with pristine
+                  beaches and rich Swahili heritage.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">From $1,599</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden tours -->
+          <div
+            class="col-lg-4 col-md-6 hidden-tour wow fadeInUp"
+            data-wow-delay="0.1s"
+          >
+            <div class="tour-package">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Nairobi Tour"
+              />
+              <div class="p-4">
+                <h5>Nairobi</h5>
+                <p class="mb-3">
+                  Experience the vibrant capital of Kenya, known as the "Green
+                  City in the Sun," with its unique blend of urban
+                  sophistication and natural beauty.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">From $1,899</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 hidden-tour wow fadeInUp"
+            data-wow-delay="0.3s"
+          >
+            <div class="tour-package">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Zanzibar Tour"
+              />
+              <div class="p-4">
+                <h5>Zanzibar</h5>
+                <p class="mb-3">
+                  Discover the spice island of Zanzibar with its white sandy
+                  beaches, historic Stone Town, and rich cultural heritage that
+                  spans centuries.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">From $2,199</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="col-lg-4 col-md-6 hidden-tour wow fadeInUp"
+            data-wow-delay="0.5s"
+          >
+            <div class="tour-package">
+              <img
+                class="img-fluid"
+                src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Kilimanjaro Tour"
+              />
+              <div class="p-4">
+                <h5>Kilimanjaro</h5>
+                <p class="mb-3">
+                  Embark on an adventure to Africa's highest peak, Mount
+                  Kilimanjaro, with breathtaking views and diverse ecosystems
+                  along the way.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="text-primary fw-bold">From $3,499</span>
+                  <a class="btn btn-sm btn-primary" href="">View Details</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-5 wow fadeInUp" data-wow-delay="0.1s">
+          <button id="view-all-btn" class="btn btn-primary py-3 px-5">
+            View All Tours
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Packed Tours Section End -->
 
     <!-- Footer Start -->
     <div
@@ -357,6 +604,45 @@
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/parallax/parallax.min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const viewAllBtn = document.getElementById("view-all-btn");
+        const hiddenTours = document.querySelectorAll(".hidden-tour");
+        let showingAll = false;
+
+        // Function to show all tours
+        function showAllTours() {
+          hiddenTours.forEach((tour) => {
+            tour.style.display = "block";
+          });
+          viewAllBtn.textContent = "Show Less Tours";
+          showingAll = true;
+        }
+
+        // Function to hide additional tours
+        function hideAdditionalTours() {
+          hiddenTours.forEach((tour) => {
+            tour.style.display = "none";
+          });
+          viewAllBtn.textContent = "View All Tours";
+          showingAll = false;
+        }
+
+        // Toggle tours when button is clicked
+        viewAllBtn.addEventListener("click", function () {
+          if (showingAll) {
+            hideAdditionalTours();
+          } else {
+            showAllTours();
+          }
+        });
+
+        // Reset to original state when page is unloaded
+        window.addEventListener("beforeunload", function () {
+          hideAdditionalTours();
+        });
+      });
+    </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
